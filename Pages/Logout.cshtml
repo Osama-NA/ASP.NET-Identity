@@ -1,0 +1,19 @@
+﻿@page
+@model ASP.NET_Core_Identity.Pages.LogoutModel
+@{
+    ViewData["Title"] = "Logout";
+}
+
+<form method="post">
+    <div class="container mt-5">
+        <div cclass="row justify-content-center">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <p>Are you sure you want to logout?</p>
+                <p>
+                    <button class="btn-primary btn" asp-page-handler="Logout">Yes</button>
+                    <button class="btn-light m-lg-5 border-dark btn" asp-page-handler="DontLogout">No</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</form>

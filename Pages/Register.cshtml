@@ -1,0 +1,37 @@
+﻿@page
+@model ASP.NET_Core_Identity.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Register</h1>
+
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Register.Email"></label>
+                    <input type="text" class="form-control" asp-for="Register.Email"/>
+                    <span class="text-danger" asp-validation-for="Register.Email"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Register.Password"></label>
+                    <input type="password" class="form-control" asp-for="Register.Password"/>
+                    <span class="text-danger" asp-validation-for="Register.Password"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Register.ConfirmPassword"></label>
+                    <input type="password" class="form-control" asp-for="Register.ConfirmPassword"/>
+                    <span class="text-danger" asp-validation-for="Register.ConfirmPassword"></span>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn-primary btn">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
